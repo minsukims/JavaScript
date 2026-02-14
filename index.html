@@ -3,12 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>number-guess-game</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>첫번째 프로젝트다아앙~~~</h1>
-    <p>예~~~~~~~~</p>
-    <h2>추가 ㄱㄱ~~~~~</h2>
+    <div class="wrap">
+      <header id="header">
+        <div class="header-image">
+          <div id="view">화면</div>
+        </div>
+        <div class="header-answer">
+          <div id="answer">정답은 :</div>
+          <div id="count-down">정답 남은 횟수 :</div>
+        </div>
+      </header>
+      <main id="main">
+        <div class="main-container">
+          <div class="input-area">
+            <input type="number" id="user-input" />
+          </div>
+          <div class="button-area">
+            <button id="game-play">Go</button>
+            <button id="reset-button">Reset</button>
+          </div>
+        </div>
+      </main>
+      <footer id="footer"></footer>
+    </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
