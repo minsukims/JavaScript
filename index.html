@@ -10,7 +10,7 @@
     <div class="wrap">
       <header id="header">
         <div class="header-image">
-          <div id="view">화면</div>
+          <div id="view"></div>
         </div>
         <div class="header-answer">
           <div id="answer">정답은 :</div>
@@ -20,7 +20,11 @@
       <main id="main">
         <div class="main-container">
           <div class="input-area">
-            <input type="number" id="user-input" />
+            <input
+              type="number"
+              id="user-input"
+              placeholder="정답을 입력하셈"
+            />
           </div>
           <div class="button-area">
             <button id="game-play">Go</button>
@@ -28,7 +32,9 @@
           </div>
         </div>
       </main>
-      <footer id="footer"></footer>
+      <footer id="footer">
+        <div class="footer-container" id="comment"></div>
+      </footer>
     </div>
 
     <script src="main.js"></script>

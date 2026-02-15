@@ -6,39 +6,64 @@
 .wrap {
   width: 1200px;
   margin: 30px auto;
-  background-color: #c5b3b3;
+  background-image: url(img/bgimage.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 10;
+}
+.wrap::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: -1;
 }
 #header {
   width: 100%;
-  background-color: #e8d3d3;
 }
 #header > .header-image {
   width: 800px;
   height: 400px;
-  margin: 0px auto;
-  background-color: #b9aeae;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+#header > .header-image > #view {
+  width: 100%;
+  height: 100%;
+  background-image: url("img/image0.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  overflow: hidden;
 }
 #header > .header-answer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 800px;
   height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 #header > .header-answer div {
-  margin: 0 100px;
-  border: 1px solid bisque;
-  width: 200px;
-  height: 50px;
+  border: 1px solid rgb(218, 180, 134);
   border-radius: 20px;
   display: flex;
   align-items: center;
-  padding-left: 10px;
+  padding: 20px;
   font-size: 1em;
+  box-sizing: border-box;
+  color: rgb(82, 21, 179);
 }
 #main {
   width: 100%;
   height: 200px;
-  background-color: #969292;
 }
 #main > .main-container {
   width: 800px;
@@ -54,20 +79,23 @@
 #main > .main-container > .input-area > input {
   text-align: center;
   font-size: 2em;
+  border-radius: 30px;
+  border: 2px solid lightblue;
 }
 #main > .main-container > .button-area {
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
 }
 #main > .main-container > .button-area button {
   border: 1px solid bisque;
   width: 100px;
   height: 50px;
   border-radius: 20px;
-  margin-right: 10px;
+  margin: 10px;
   font-size: 1em;
+  box-sizing: border-box;
 }
 #main > .main-container > .button-area button:hover {
   background-color: #e4f3d0;
@@ -76,5 +104,76 @@
 #footer {
   width: 100%;
   height: 100px;
-  background-color: #aba8a8;
+}
+#footer > .footer-container {
+  width: 800px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .wrap {
+    width: 96%;
+  }
+  #header > .header-image {
+    width: 80%;
+  }
+  #header > .header-answer {
+    width: 80%;
+  }
+  #main > .main-container {
+    width: 80%;
+  }
+  #footer > .footer-container {
+    width: 80%;
+  }
+}
+@media (max-width: 400px) {
+  #header > .header-image {
+    width: 100%;
+    height: 150px;
+  }
+
+  #header > .header-answer {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    padding: 10px 0;
+    white-space: normal;
+  }
+
+  #header > .header-answer div {
+    width: 90%;
+    justify-content: center;
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  #main > .main-container {
+    width: 100%;
+    height: auto;
+  }
+
+  #main > .main-container > .button-area {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #main > .main-container > .button-area button {
+    width: 80%;
+    max-width: 200px;
+  }
+
+  #main > .main-container > .input-area > input {
+    width: 90%;
+    font-size: 1.5em;
+  }
+
+  #footer > .footer-container {
+    width: 100%;
+    display: none;
+  }
 }
